@@ -37,16 +37,16 @@ const AddressForm = ({ checkoutToken, test }) => {
   };
 
   useEffect(() => {
-    fetchShippingCountries(checkoutToken.id);
-  }, []);
+    fetchShippingCountries(checkoutToken.id); // eslint-disable-next-line
+  }, []); 
 
   useEffect(() => {
     if (shippingCountry) fetchSubdivisions(shippingCountry);
   }, [shippingCountry]);
 
   useEffect(() => {
-    if (shippingSubdivision) fetchShippingOptions(checkoutToken.id, shippingCountry, shippingSubdivision);
-  }, [shippingSubdivision]);
+    if (shippingSubdivision) fetchShippingOptions(checkoutToken.id, shippingCountry, shippingSubdivision); // eslint-disable-next-line
+  }, [shippingSubdivision]); // eslint-disable-next-line
 
   return (
     <>

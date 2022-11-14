@@ -1,6 +1,6 @@
 {
-  "name": "eccomerce",
-  "version": "0.1.0",
+  "name": "Stack AIO",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
     "@chec/commerce.js": "^2.3.0-beta1",
