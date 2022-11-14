@@ -47,7 +47,7 @@ const Slide = styled.div`
 `;
 
 const ImgContainer = styled.div`
-  height: 100%;
+  height: 50%;
   flex: 1;
 `;
 
@@ -70,15 +70,6 @@ const Desc = styled.p`
   font-weight: 500;
 `;
 
-const Button = styled.button`
-  padding: 10px;
-  font-size: 20px;
-  background-color: transparent;
-  cursor: pointer;
-  color: #f50057;
-  border-color: #f50057;
-`;
-
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const handleClick = (direction) => {
@@ -97,14 +88,13 @@ const Slider = () => {
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
           <Slide bg={item.bg} key={item.id}>
-            <ImgContainer>
-              <Image src={item.img} />
-            </ImgContainer>
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Button>SHOW NOW</Button>
             </InfoContainer>
+            <ImgContainer>
+              <Image src={item.img} />
+            </ImgContainer>
           </Slide>
         ))}
       </Wrapper>
